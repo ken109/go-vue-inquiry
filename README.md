@@ -5,7 +5,7 @@ git clone https://github.com/ken109/go-vue-inquiry.git
 cd go-vue-inquiry
 
 docker-compose up
-docker-compse up
+docker-compose up
 ```
 
 `docker-compose up`は2回行ってください。1回目起動時にmysqlの起動がAPIサーバーの起動に間に合わなくてAPIサーバーがうまく起動しないためです。
