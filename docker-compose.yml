@@ -2,7 +2,6 @@ version: '3'
 services:
   server:
     build: server
-    container_name: inquiry_server
     ports:
       - "8080:80"
     depends_on:
@@ -10,7 +9,6 @@ services:
 
   front:
     build: front
-    container_name: inquiry_front
     ports:
       - "8081:80"
     depends_on:
@@ -18,7 +16,6 @@ services:
   
   db:
     image: mysql
-    container_name: inquiry_mysql
     ports:
       - "33061:3306"
     environment:
