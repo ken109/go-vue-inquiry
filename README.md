@@ -10,7 +10,7 @@ docker-compose down
 docker-compse up
 ```
 
-`docker-compose up`は二回行ってください。1回目起動時にmysqlの起動がapiサーバーの起動に間に合わなくでうまくapiサーバーが起動しないためです。
+`docker-compose up`は2回行ってください。1回目起動時にmysqlの起動がapiサーバーの起動に間に合わなくてapiサーバーがうまく起動しないためです。
 
 ## アクセス
 ### WEBページ
@@ -18,3 +18,6 @@ http://localhost:8081/
 
 ### APIサーバー
 http://localhost:8080/
+
+## その他
+33061ポートでDBにつなげます
