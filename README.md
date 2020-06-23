@@ -18,3 +18,6 @@ http://localhost:8081/
 
 ### APIサーバー
 http://localhost:8080/
+
+## その他
+33061ポートでDBにつなげます
