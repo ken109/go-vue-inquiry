@@ -1,0 +1,11 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: inquiry-ingress
+spec:
+  rules:
+  - http:
+      paths:
+      - backend:
+          serviceName: front-service
+          servicePort: 80
