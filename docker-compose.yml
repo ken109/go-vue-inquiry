@@ -5,7 +5,7 @@ services:
     ports:
       - "8080:80"
     depends_on:
-      - db
+      - mysql
 
   front:
     build: front
@@ -13,3 +13,13 @@ services:
       - "8081:80"
     depends_on:
       - server
+
+  mysql-service:
+    image: mysql:5.7
+    ports:
+      - "33061:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: inquiry
+      MYSQL_USER: main
+      MYSQL_PASSWORD: password

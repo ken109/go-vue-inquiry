@@ -13,9 +13,9 @@ var (
 
 func Init() {
 	DBMS := "mysql"
-	USER := "native"
+	USER := "main"
 	PASS := "password"
-	PROTOCOL := "tcp(34.97.42.56:33068)"
+	PROTOCOL := "tcp(mysql-service:3306)"
 	DBNAME := "inquiry"
 
 	CONNECT := USER + ":" + PASS + "@" + PROTOCOL + "/" + DBNAME
