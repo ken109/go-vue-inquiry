@@ -36,7 +36,7 @@ func router() *gin.Engine {
 		MaxAge: 24 * time.Hour,
 	}))
 
-	u := r.Group("/inquiry")
+	u := r.Group("/api/inquiry")
 	{
 		ctrl := inquiry.Controller{}
 		u.GET("", ctrl.Index)

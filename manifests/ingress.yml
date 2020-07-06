@@ -4,8 +4,14 @@ metadata:
   name: inquiry-ingress
 spec:
   rules:
-  - http:
-      paths:
-      - backend:
-          serviceName: front-service
-          servicePort: 80
+    - host: localhost
+      http:
+        paths:
+          - path: /api
+            backend:
+              serviceName: server-service
+              servicePort: 80
+          - path: /
+            backend:
+              serviceName: front-service
+              servicePort: 80

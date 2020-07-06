@@ -6,7 +6,7 @@ import router from './router'
 
 Vue.config.productionTip = false
 
-Vue.api = Vue.prototype.api = 'http://127.0.0.1/api'
+Vue.api = Vue.prototype.api = 'http://localhost/api'
 
 /* eslint-disable no-new */
 new Vue({

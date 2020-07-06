@@ -4,6 +4,8 @@ build:
   artifacts:
     - imageName: asia.gcr.io/ken109-private/inquiry-front
       workspace: front
+    - imageName: asia.gcr.io/ken109-private/inquiry-server
+      workspace: server
 deploy:
   kubectl:
     manifests:

@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: front-deployment
+  name: server-deployment
   labels:
-    app: front
+    app: server
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: front
+      app: server
   template:
     metadata:
       labels:
-        app: front
+        app: server
     spec:
       containers:
-        - name: front
-          image: asia.gcr.io/ken109-private/inquiry-front
+        - name: server
+          image: asia.gcr.io/ken109-private/inquiry-server
           ports:
             - containerPort: 80
