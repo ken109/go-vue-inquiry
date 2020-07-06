@@ -14,10 +14,10 @@ docker-compose up
 `docker-compose up`は2回行ってください。1回目起動時にmysqlの起動がAPIサーバーの起動に間に合わなくてAPIサーバーがうまく起動しないためです。
 
 ### WEBページ
-http://localhost/api/
+http://localhost:8080/
 
 ### APIサーバー
-http://localhost:8080/
+http://localhost/api/
 
 ## Kubernetesでの起動
 使用ポート：80, 3306
@@ -27,10 +27,10 @@ skaffold dev
 ```
 
 ### WEBページ
-http://localhost/api/
+http://localhost/
 
 ### APIサーバー
-http://localhost/
+http://localhost/api/
 
 ## その他
 33061ポートでDBにつなげます
