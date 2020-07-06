@@ -3,14 +3,14 @@ services:
   server:
     build: server
     ports:
-      - "8080:80"
+      - "80:80"
     depends_on:
-      - mysql
+      - mysql-service
 
   front:
     build: front
     ports:
-      - "8081:80"
+      - "8080:80"
     depends_on:
       - server
 

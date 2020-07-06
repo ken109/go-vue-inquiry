@@ -32,6 +32,7 @@ func router() *gin.Engine {
 		},
 		AllowOrigins: []string{
 			"http://localhost",
+			"http://localhost:8080",
 		},
 		MaxAge: 24 * time.Hour,
 	}))
