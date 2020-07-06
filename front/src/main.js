@@ -6,7 +6,7 @@ import router from './router'
 
 Vue.config.productionTip = false
 
-Vue.api = Vue.prototype.api = 'http://127.0.0.1:8080'
+Vue.api = Vue.prototype.api = 'http://127.0.0.1/api'
 
 /* eslint-disable no-new */
 new Vue({
