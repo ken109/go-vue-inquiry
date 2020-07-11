@@ -7,7 +7,7 @@ services:
     depends_on:
       - mysql-service
 
-  front:
+  front-vue:
     build: front-vue
     ports:
       - "8080:80"
