@@ -26,7 +26,9 @@
                 <td>
                   <router-link :to="/edit/ + inquiry.id" class="btn btn-secondary" role="button">編集</router-link>
                 </td>
-                <td><button class="btn btn-danger" @click.prevent="deleteById(inquiry.id)">削除</button></td>
+                <td>
+                  <button class="btn btn-danger" @click.prevent="deleteById(inquiry.id)">削除</button>
+                </td>
               </tr>
             </table>
           </div>

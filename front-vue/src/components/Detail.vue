@@ -3,7 +3,7 @@
     <div class="row justify-content-center">
       <div class="col-md-8">
         <div class="card">
-          <div class="card-header">編集</div>
+          <div class="card-header">詳細</div>
           <div class="card-body">
               <div class="row">
                 <label for="name" class="col-md-4 col-form-label text-md-right">名前</label>

@@ -8,7 +8,7 @@ services:
       - mysql-service
 
   front:
-    build: front
+    build: front-react
     ports:
       - "8080:80"
     depends_on:
