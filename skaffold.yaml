@@ -3,7 +3,7 @@ kind: Config
 build:
   artifacts:
     - imageName: asia.gcr.io/ken109-private/inquiry-front
-      workspace: front
+      workspace: front-react
     - imageName: asia.gcr.io/ken109-private/inquiry-server
       workspace: server
 deploy:
