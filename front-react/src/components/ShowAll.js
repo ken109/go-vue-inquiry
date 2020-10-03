@@ -1,10 +1,10 @@
 import React from 'react';
 import Layout from "../Layout";
 import {Link} from "react-router-dom";
-import axios from 'axios'
+import axios from '../modules/axios'
 
 class ShowAll extends React.Component {
-    constructor (props) {
+    constructor(props) {
         super(props);
         this.state = {
             inquiries: []
@@ -13,7 +13,7 @@ class ShowAll extends React.Component {
         this.delete = this.delete.bind(this)
     }
 
-    componentDidMount () {
+    componentDidMount() {
         axios.get(global.api + '/inquiry').then(response => {
             this.setState({
                 inquiries: response.data
@@ -21,7 +21,7 @@ class ShowAll extends React.Component {
         })
     }
 
-    delete (id) {
+    delete(id) {
         axios.delete(global.api + '/inquiry/' + id).then(() => {
             axios.get(global.api + '/inquiry').then(response => {
                 this.setState({
@@ -31,7 +31,7 @@ class ShowAll extends React.Component {
         })
     }
 
-    render () {
+    render() {
         return (
             <Layout>
                 <div className="container">

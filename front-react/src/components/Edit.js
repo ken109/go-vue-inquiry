@@ -1,9 +1,9 @@
 import React from "react";
 import Layout from "../Layout";
-import axios from "axios";
+import axios from '../modules/axios'
 
 class Edit extends React.Component {
-    constructor (props) {
+    constructor(props) {
         super(props);
         this.state = {
             data: {
@@ -16,13 +16,13 @@ class Edit extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this)
     }
 
-    componentDidMount () {
+    componentDidMount() {
         axios.get(global.api + '/inquiry/' + this.props.match.params.id).then(response => {
             this.setState({data: response.data})
         })
     }
 
-    handleChange (e) {
+    handleChange(e) {
         let data = this.state.data
         switch (e.target.id) {
             case 'name':
@@ -39,7 +39,7 @@ class Edit extends React.Component {
         this.setState({data: data});
     }
 
-    handleSubmit (e) {
+    handleSubmit(e) {
         e.preventDefault()
         axios.put(global.api + '/inquiry/' + this.props.match.params.id, null, {
             params: {
@@ -52,7 +52,7 @@ class Edit extends React.Component {
         })
     }
 
-    render () {
+    render() {
         return (
             <Layout>
                 <div className="container">

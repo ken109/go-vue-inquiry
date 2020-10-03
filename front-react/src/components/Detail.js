@@ -1,9 +1,9 @@
 import React from "react";
 import Layout from "../Layout";
-import axios from "axios";
+import axios from "../modules/axios";
 
 class Detail extends React.Component {
-    constructor (props) {
+    constructor(props) {
         super(props);
         this.state = {
             data: {
@@ -14,13 +14,13 @@ class Detail extends React.Component {
         };
     }
 
-    componentDidMount () {
+    componentDidMount() {
         axios.get(global.api + '/inquiry/' + this.props.match.params.id).then(response => {
             this.setState({data: response.data})
         })
     }
 
-    render () {
+    render() {
         return (
             <Layout>
                 <div className="container">

@@ -1,9 +1,9 @@
 import React from "react";
 import Layout from "../Layout";
-import axios from "axios";
+import axios from "../modules/axios";
 
 class Add extends React.Component {
-    constructor (props) {
+    constructor(props) {
         super(props);
         this.state = {
             data: {
@@ -16,7 +16,7 @@ class Add extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this)
     }
 
-    handleChange (e) {
+    handleChange(e) {
         let data = this.state.data
         switch (e.target.id) {
             case 'name':
@@ -33,7 +33,7 @@ class Add extends React.Component {
         this.setState({data: data});
     }
 
-    handleSubmit (e) {
+    handleSubmit(e) {
         e.preventDefault()
         axios.post(global.api + '/inquiry', null, {
             params: {
@@ -46,7 +46,7 @@ class Add extends React.Component {
         })
     }
 
-    render () {
+    render() {
         return (
             <Layout>
                 <div className="container">
@@ -62,7 +62,8 @@ class Add extends React.Component {
 
                                             <div className="col-md-6">
                                                 <input id="name" type="text" className="form-control"
-                                                       defaultValue={this.state.data.name} onChange={this.handleChange}/>
+                                                       defaultValue={this.state.data.name}
+                                                       onChange={this.handleChange}/>
                                             </div>
                                         </div>
 
@@ -72,7 +73,8 @@ class Add extends React.Component {
 
                                             <div className="col-md-6">
                                                 <input id="mail" type="text" className="form-control"
-                                                       defaultValue={this.state.data.mail} onChange={this.handleChange}/>
+                                                       defaultValue={this.state.data.mail}
+                                                       onChange={this.handleChange}/>
                                             </div>
                                         </div>
 
@@ -82,7 +84,8 @@ class Add extends React.Component {
 
                                             <div className="col-md-6">
                                                 <input id="message" type="text" className="form-control"
-                                                       defaultValue={this.state.data.message} onChange={this.handleChange}/>
+                                                       defaultValue={this.state.data.message}
+                                                       onChange={this.handleChange}/>
                                             </div>
                                         </div>
 
